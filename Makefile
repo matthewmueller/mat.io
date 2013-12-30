@@ -24,10 +24,10 @@ clean:
 	rm -fr components node_modules
 
 production:
-	@git pull origin master
-	@npm update --production --loglevel warn
-	@rm -rf components
-	@component install
-	@./lib/build/builder
+	git pull origin master
+	npm update --production --loglevel warn
+	rm -rf components
+	component install
+	./lib/build/builder
 
 .PHONY: build clean minify production
